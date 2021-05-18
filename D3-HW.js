@@ -123,19 +123,43 @@ let greatest = 0;
         arr.forEach((n)=> n > greatest? greatest = n: "" )
         return console.log(greatest)
 }
-greatestInteger([3,62,21,78,100])
+// greatestInteger([3,62,21,78,100])
 
 // 14)
 // Create a function to get the largest even number from an array of integers.
 
-
+const greatestEvenInteger = (arr) => {
+    let greatest = 0;
+            arr.forEach((n)=> n > greatest && n % 2 ===0 ? greatest = n: "" )
+            return console.log(greatest)
+    }
+    // greatestEvenInteger([2,62,21,78,155])
 
 // 15)
 // Create a function to check from two given integers, whether one is positive and another one is negative.
 
+const testPositiveOrNegative = (n1,n2) => {
+        
+    [n1,n2].forEach(n=> {
+        console.log(
+        n >= 0 ? `${n} is a positive number`:
+        n < 0 ? `${n} is a negative number`: "")
+    })
+}
+// testPositiveOrNegative(-1,5)
+
 // 16)
 // Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
 
+const convertUpperLowerCase = (str) =>{
+if(str.length <= 3){
+   return console.log(str.toUpperCase())
+}
+else if(str.length > 3)
+    return console.log(str.slice(0,3).toUpperCase() + str.slice(2,-1))
+}
+
+convertUpperLowerCase("sup")
 // 17)
 // Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
 

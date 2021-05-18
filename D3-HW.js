@@ -159,10 +159,17 @@ else if(str.length > 3)
     return console.log(str.slice(0,3).toUpperCase() + str.slice(2,-1))
 }
 
-convertUpperLowerCase("sup")
+convertUpperLowerCase("super kicking super nice!")
 // 17)
 // Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
 
+
+const checkSumRange = (n1,n2) =>{
+    let sum = n1 + n2
+    sum > 50 && sum < 80 ? console.log(65) : console.log(80)
+}
+    checkSumRange(30,80)
+    
 // 18)
 // Create a function to convert a number to a string, the content of which depends on the number's factors. Follow next example:
 
